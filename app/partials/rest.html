@@ -1,0 +1,23 @@
+
+<h1>
+  Using The $http Service In AngularJS To Make AJAX Requests
+</h1>
+
+<!-- Show existing friends. -->
+<ul>
+  <li ng-repeat="friend in friends">
+
+    {{ friend.name }}
+
+    ( <a ng-click="removeFriend( friend )">delete</a> )
+
+  </li>
+</ul>
+
+<!-- Add a new friend to the list. -->
+<form ng-submit="addFriend()">
+
+  <input type="text" ng-model="form.name" size="20" />
+  <input type="submit" value="Add Friend" />
+
+</form>

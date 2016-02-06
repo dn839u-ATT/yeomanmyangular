@@ -309,7 +309,7 @@
     assert.strictEqual(view.$el.attr('id'), 'backboneId');
   });
 
-  QUnit.test('multiple views per element', function(assert) {
+  QUnit.test('multiple partials per element', function(assert) {
     assert.expect(3);
     var count = 0;
     var $el = $('<p></p>');
@@ -396,7 +396,7 @@
     assert.ok(!view2.el.id);
   });
 
-  QUnit.test('views stopListening', function(assert) {
+  QUnit.test('partials stopListening', function(assert) {
     assert.expect(0);
     var View = Backbone.View.extend({
       initialize: function() {

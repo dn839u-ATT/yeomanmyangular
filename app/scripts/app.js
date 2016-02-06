@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+/*angular
   .module('myangularApp', [
     'ngAnimate',
     'ngCookies',
@@ -20,16 +20,45 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'partials/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
+        templateUrl: 'partials/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/rest', {
+        templateUrl: 'partials/rest.html',
+        controller: 'RestCtrl',
+        controllerAs: 'rest'
       })
       .otherwise({
         redirectTo: '/'
       });
+  });*/
+
+angular.module('myangularApp', ['ui.router', 'ngResource', 'myangularApp.controllers', 'myangularApp.services']);
+
+angular.module('myangularApp').config(function($stateProvider, $httpProvider) {
+  $stateProvider.state('movies', { // state for showing all movies
+    url: '/movies',
+    templateUrl: 'partials/movies.html',
+    controller: 'MovieListController'
+  }).state('viewMovie', { //state for showing single movie
+    url: '/movies/:id/view',
+    templateUrl: 'partials/movie-view.html',
+    controller: 'MovieViewController'
+  }).state('newMovie', { //state for adding a new movie
+    url: '/movies/new',
+    templateUrl: 'partials/movie-add.html',
+    controller: 'MovieCreateController'
+  }).state('editMovie', { //state for updating a movie
+    url: '/movies/:id/edit',
+    templateUrl: 'partials/movie-edit.html',
+    controller: 'MovieEditController'
   });
+}).run(function($state) {
+  $state.go('movies'); //make a transition to movies state when app starts
+});

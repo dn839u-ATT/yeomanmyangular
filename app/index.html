@@ -5,6 +5,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -41,15 +42,30 @@
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/about">About</a></li>
+              <li><a ng-href="#/rest">Rest</a></li>
               <li><a ng-href="#/">Contact</a></li>
             </ul>
           </div>
         </div>
       </div>
+          <!--<nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="movies">The Movie App</a>
+              </div>
+              <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a ui-sref="movies">Home</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>-->
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+      <!--<div ng-view=""></div>-->  <!-- This is where our partials will load -->
+      <div ui-view></div> <!-- This is where our views will load -->
+
     </div>
 
     <div class="footer">
@@ -82,6 +98,7 @@
     <script src="components/angular-sanitize/angular-sanitize.js"></script>
     <script src="components/angular-touch/angular-touch.js"></script>
     <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -89,6 +106,12 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/rest.js"></script>
+   <!--     <script src="scripts/controllers/movielist.js.js"></script>
+        <script src="scripts/controllers/movieedit.js"></script>
+        <script src="scripts/controllers/movieview.js"></script>-->
+    <script src="scripts/controllers/moviecontrollers.js"></script>
+    <script src="scripts/services.js"></script>
         <!-- endbuild -->
 </body>
 </html>

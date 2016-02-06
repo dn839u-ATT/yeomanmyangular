@@ -35,6 +35,7 @@ module.exports = function(config) {
       'app/components/angular-mocks/angular-mocks.js',
       'app/components/lodash/lodash.js',
       'app/components/restangular/dist/restangular.js',
+      'app/components/angular-ui-router/release/angular-ui-router.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",
