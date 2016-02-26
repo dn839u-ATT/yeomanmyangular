@@ -39,7 +39,7 @@
       });
   });*/
 
-angular.module('myangularApp', ['ui.router', 'ngResource', 'myangularApp.controllers', 'myangularApp.services']);
+angular.module('myangularApp', ['ui.router', 'ngResource','file-model', 'myangularApp.controllers', 'myangularApp.services' ]);
 
 angular.module('myangularApp').config(function($stateProvider, $httpProvider) {
   $stateProvider.state('movies', { // state for showing all movies
@@ -62,3 +62,19 @@ angular.module('myangularApp').config(function($stateProvider, $httpProvider) {
 }).run(function($state) {
   $state.go('movies'); //make a transition to movies state when app starts
 });
+
+/*angular.module('myangularApp').directive('fileModel', ['$parse', function ($parse) {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      var model = $parse(attrs.fileModel);
+      var modelSetter = model.assign;
+
+      element.bind('change', function(){
+        scope.$apply(function(){
+          modelSetter(scope, element[0].files[0]);
+        });
+      });
+    }
+  };
+}]);*/

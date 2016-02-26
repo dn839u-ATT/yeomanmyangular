@@ -36,6 +36,7 @@ module.exports = function(config) {
       'app/components/lodash/lodash.js',
       'app/components/restangular/dist/restangular.js',
       'app/components/angular-ui-router/release/angular-ui-router.js',
+      'app/components/angular-file-upload/dist/angular-file-upload.min.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css" />
     <!-- endbuild -->
   </head>
   <body ng-app="myangularApp">
@@ -99,6 +101,9 @@
     <script src="components/angular-touch/angular-touch.js"></script>
     <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="components/angular-file-model/angular-file-model.js"></script>
+
+
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -112,6 +117,7 @@
         <script src="scripts/controllers/movieview.js"></script>-->
     <script src="scripts/controllers/moviecontrollers.js"></script>
     <script src="scripts/services.js"></script>
+    <script src="scripts/filters/VideoFilter.js"></script>
         <!-- endbuild -->
 </body>
 </html>
